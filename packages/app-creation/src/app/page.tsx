@@ -1,29 +1,71 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Home() {
+  const [count, setCount] = useState(0);
+  const [message, setMessage] = useState("Welcome to Test 2!");
+
   return (
     <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4 text-blue-600">Test 2</h1>
+          <p className="text-lg text-gray-600 dark:text-gray-300">{message}</p>
+        </div>
+
+        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg border">
+          <h2 className="text-2xl font-semibold mb-4">Interactive Counter</h2>
+          <div className="flex items-center gap-4">
+            <button 
+              onClick={() => setCount(count - 1)}
+              className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded transition-colors"
+            >
+              -
+            </button>
+            <span className="text-3xl font-bold min-w-[60px] text-center">{count}</span>
+            <button 
+              onClick={() => setCount(count + 1)}
+              className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded transition-colors"
+            >
+              +
+            </button>
+          </div>
+        </div>
+
+        <div className="bg-gradient-to-r from-purple-400 to-pink-400 p-6 rounded-lg text-white">
+          <h3 className="text-xl font-semibold mb-2">Message Changer</h3>
+          <div className="flex gap-2 flex-wrap">
+            <button 
+              onClick={() => setMessage("Hello from Test 2!")}
+              className="bg-white/20 hover:bg-white/30 px-3 py-1 rounded transition-colors"
+            >
+              Hello
+            </button>
+            <button 
+              onClick={() => setMessage("This is working great!")}
+              className="bg-white/20 hover:bg-white/30 px-3 py-1 rounded transition-colors"
+            >
+              Working
+            </button>
+            <button 
+              onClick={() => setMessage("Test 2 is complete!")}
+              className="bg-white/20 hover:bg-white/30 px-3 py-1 rounded transition-colors"
+            >
+              Complete
+            </button>
+          </div>
+        </div>
+
         <Image
-          className="dark:invert"
+          className="dark:invert opacity-50"
           src="/next.svg"
           alt="Next.js logo"
-          width={180}
-          height={38}
+          width={120}
+          height={25}
           priority
         />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
           <a
@@ -101,3 +143,4 @@ export default function Home() {
     </div>
   );
 }
+
