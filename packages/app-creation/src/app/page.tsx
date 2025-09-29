@@ -104,13 +104,13 @@ export default function Calculator() {
           </button>
           <button
             onClick={() => inputOperation('÷')}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-4 rounded-lg transition-colors"
+            className="bg-red-500 hover:bg-red-600 text-white font-semibold py-4 rounded-lg transition-colors"
           >
             ÷
           </button>
           <button
             onClick={() => inputOperation('×')}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-4 rounded-lg transition-colors"
+            className="bg-red-500 hover:bg-red-600 text-white font-semibold py-4 rounded-lg transition-colors"
           >
             ×
           </button>
@@ -136,7 +136,7 @@ export default function Calculator() {
           </button>
           <button
             onClick={() => inputOperation('-')}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-4 rounded-lg transition-colors"
+            className="bg-red-500 hover:bg-red-600 text-white font-semibold py-4 rounded-lg transition-colors"
           >
             -
           </button>
@@ -162,7 +162,7 @@ export default function Calculator() {
           </button>
           <button
             onClick={() => inputOperation('+')}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-4 rounded-lg transition-colors"
+            className="bg-red-500 hover:bg-red-600 text-white font-semibold py-4 rounded-lg transition-colors"
           >
             +
           </button>
@@ -211,6 +211,7 @@ export default function Calculator() {
     </div>
   );
 }
+
 
 
 
