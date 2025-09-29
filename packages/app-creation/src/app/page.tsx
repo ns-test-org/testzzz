@@ -83,7 +83,7 @@ export default function Calculator() {
     <div className="min-h-screen bg-gray-100 dark:bg-gray-900 flex items-center justify-center p-4">
       <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-6 w-full max-w-sm">
         <h1 className="text-2xl font-bold text-center mb-6 text-gray-800 dark:text-white">
-          Calculator
+          YO MAMA
         </h1>
         
         {/* Display */}
@@ -211,6 +211,7 @@ export default function Calculator() {
     </div>
   );
 }
+
 
 
 
